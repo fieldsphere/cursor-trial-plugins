@@ -1,34 +1,43 @@
-# Cursor plugin template
+# Cursor Trial Plugins
 
-Build and publish Cursor Marketplace plugins from a single repo.
+Build and publish Cursor Marketplace plugins from a single repository.
 
-Two starter plugins are included:
+## Included plugins
 
-- **starter-simple**: rules and skills only
-- **starter-advanced**: rules, skills, agents, commands, hooks, MCP, and scripts
+This repo currently ships five grouped plugins:
 
-## Getting started
+- **git-workflows**: commit, PR, CI, merge conflict, and branch validation workflows
+- **documentation**: README updates, weekly review summaries, markdown naming, and docs writing
+- **pm**: Jira-oriented PM workflows with MCP config, ticket writing, and board summarization
+- **design**: wireframes, component design support, and mockup workflow
+- **testing-reliability**: Datadog dashboards, performance optimization, and testing agents
 
-[Use this template](https://github.com/cursor/plugin-template/generate) to create a new repository, then customize:
+Starter references are still available under `plugins/starter-simple` and `plugins/starter-advanced`.
 
-1. `.cursor-plugin/marketplace.json`: set marketplace `name`, `owner`, and `metadata`.
-2. `plugins/*/.cursor-plugin/plugin.json`: set `name` (lowercase kebab-case), `displayName`, `author`, `description`, `keywords`, `license`, and `version`.
-3. Replace placeholder rules, skills, agents, commands, hooks, scripts, and logos.
+## Repository structure
 
-To add more plugins, see `docs/add-a-plugin.md`.
+- `.cursor-plugin/marketplace.json`: marketplace manifest and plugin registry
+- `plugins/<plugin-name>/.cursor-plugin/plugin.json`: per-plugin metadata
+- `plugins/<plugin-name>/rules`: rule files (`.mdc`)
+- `plugins/<plugin-name>/skills`: skill folders with `SKILL.md`
+- `plugins/<plugin-name>/agents`: subagent definitions
+- `plugins/<plugin-name>/mcp.json`: MCP server configuration for each plugin
 
-## Single plugin vs multi-plugin
+## Validate changes
 
-This template defaults to **multi-plugin** (multiple plugins in one repo).
+Run:
 
-For a **single plugin**, move your plugin folder contents to the repository root, keep one `.cursor-plugin/plugin.json`, and remove `.cursor-plugin/marketplace.json`.
+```bash
+node scripts/validate-template.mjs
+```
+
+This checks marketplace paths, plugin manifests, and required frontmatter in rule/skill/agent/command files.
 
 ## Submission checklist
 
-- Each plugin has a valid `.cursor-plugin/plugin.json`.
-- Plugin names are unique, lowercase, and kebab-case.
-- `.cursor-plugin/marketplace.json` entries map to real plugin folders.
-- All frontmatter metadata is present in rule, skill, agent, and command files.
-- Logos are committed and referenced with relative paths.
-- `node scripts/validate-template.mjs` passes.
-- Repository link is ready for submission to the Cursor team (Slack or `kniparko@anysphere.com`).
+- Each plugin has a valid `.cursor-plugin/plugin.json`
+- Plugin names are unique, lowercase, and kebab-case
+- `.cursor-plugin/marketplace.json` entries map to real plugin folders
+- Required frontmatter metadata exists in plugin content files
+- Logo paths resolve correctly from each plugin manifest
+- `node scripts/validate-template.mjs` passes
