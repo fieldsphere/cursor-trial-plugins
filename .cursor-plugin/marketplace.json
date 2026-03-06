@@ -34,6 +34,11 @@
       "name": "testing-reliability",
       "source": "testing-reliability",
       "description": "Testing and reliability workflows for Datadog, performance, and test automation"
+    },
+    {
+      "name": "planning",
+      "source": "planning",
+      "description": "Strategic planning workflows including devil's advocate analysis for decision making"
     }
   ]
 }
