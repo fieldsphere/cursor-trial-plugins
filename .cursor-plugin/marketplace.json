@@ -39,6 +39,11 @@
       "name": "planning",
       "source": "planning",
       "description": "Strategic planning workflows including devil's advocate analysis for decision making"
+    },
+    {
+      "name": "featureflag-migration",
+      "source": "featureflag-migration",
+      "description": "Migrate legacy feature flag systems to OpenFeature with inventory, migration, verification, cleanup, and scaffolding"
     }
   ]
 }
