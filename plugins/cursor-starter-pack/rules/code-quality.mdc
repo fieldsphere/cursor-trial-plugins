@@ -1,0 +1,28 @@
+---
+description: Security, structure, and quality expectations for application code in any language
+alwaysApply: true
+---
+
+# Code quality
+
+Follow these expectations when writing or changing code. Adapt idioms to the language and stack in use.
+
+## Security
+- Validate and sanitize input at trust boundaries; prefer allowlists.
+- Parameterize queries and commands; never concatenate untrusted input into SQL, shell, or OS calls.
+- Do not commit secrets; use environment variables or your org’s secret store.
+- Avoid exposing stack traces, internal paths, or sensitive data to end users.
+
+## Structure and clarity
+- Match existing patterns in the repo (layout, naming, error handling) before introducing new styles.
+- Keep modules focused; prefer small, composable units over large tangled files.
+- Make data flow and control flow easy to follow at boundaries (APIs, FFI, config loading).
+
+## Types, contracts, and invariants
+- Where the language supports it, use types, interfaces, or schemas to document boundaries and catch mistakes early.
+- Be explicit about preconditions, postconditions, and failure modes for non-trivial operations.
+- Prefer immutable or narrowly mutable data where it reduces bugs, per language norms.
+
+## Testing and docs
+- Add or update tests when the repo has a test setup and behavior changes.
+- Document public surfaces, non-obvious behavior, and anything future maintainers must not break.

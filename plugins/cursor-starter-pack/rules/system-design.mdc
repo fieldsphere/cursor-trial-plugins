@@ -1,0 +1,28 @@
+---
+description: Software design expectations for modules, APIs, and long-term evolution
+alwaysApply: true
+---
+
+# Software design
+
+Use these expectations when shaping or changing systems. Adapt to your stack and domain.
+
+## Boundaries
+- Prefer clear module or service boundaries; minimize hidden coupling across layers.
+- Expose narrow, stable interfaces; keep implementation details behind contracts you can evolve.
+
+## Coupling and cohesion
+- Group related behavior; avoid scattered duplicate logic and oversized “do everything” modules.
+- Depend on abstractions where it simplifies testing, replacement, and reasoning.
+
+## APIs and contracts
+- Document or version breaking changes; prefer additive evolution when possible.
+- Make success and failure modes explicit (errors, timeouts, partial results).
+
+## Evolution
+- Prefer migrations, feature flags, and staged rollouts over risky big-bang rewrites when impact is broad.
+- Capture decisions that affect long-lived architecture (short design notes or ADRs).
+
+## Tradeoffs
+- State the tradeoff when choosing performance, simplicity, time-to-ship, or flexibility.
+- Revisit assumptions when scale, usage, or failure modes change.

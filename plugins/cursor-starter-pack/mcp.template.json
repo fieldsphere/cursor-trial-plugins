@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "docs-placeholder": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/org/docs"],
+      "env": {}
+    }
+  }
+}
