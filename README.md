@@ -85,15 +85,10 @@ Fork this repo into your GitHub org, edit it to match your stack and conventions
 
 **Best for:** any team that wants to encode its own conventions, credentials, or tool choices — which is most teams once they move past evaluation.
 
-### Plan limits and access
-
-- **Teams** plan: up to 1 team marketplace per team. **Enterprise** plan: unlimited team marketplaces.
-- Cursor syncs new commits from the default branch, so pushing to the repo you imported is how you ship updates.
-- Members of the selected access groups see the plugins in **Settings → Plugins** inside Cursor.
-
 ## Further reading
 
 - [Cursor Plugins documentation](https://cursor.com/docs/plugins) — plugin anatomy (rules, skills, agents, commands, MCP, hooks) and team-marketplace setup.
 - [Cursor Marketplace](https://www.cursor.com/marketplace) — officially reviewed plugins you can use as references.
 - [cursor/plugin-template](https://github.com/cursor/plugin-template) — minimal starter for building a single plugin or multi-plugin marketplace.
 - [Team dashboard](https://cursor.com/docs/account/teams/dashboard) — where team marketplaces are imported and managed.
+
