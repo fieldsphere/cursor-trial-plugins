@@ -44,6 +44,11 @@
       "name": "featureflag-migration",
       "source": "featureflag-migration",
       "description": "Migrate legacy feature flag systems to OpenFeature with inventory, migration, verification, cleanup, and scaffolding"
+    },
+    {
+      "name": "cursor-starter-pack",
+      "source": "cursor-starter-pack",
+      "description": "Engineering starter pack: code quality, system design, onboarding, git hygiene, commits, planning, README hygiene, and review agents"
     }
   ]
 }

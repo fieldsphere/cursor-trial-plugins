@@ -4,13 +4,16 @@ An example Team Marketplace that includes a set of starter plugins for Cursor.
 
 ## Included plugins
 
-This repo currently ships five grouped plugins:
+This repo ships these marketplace plugins:
 
 - **git-workflows**: commit, PR, CI, merge conflict, and branch validation workflows
 - **documentation**: README updates, weekly review summaries, markdown naming, and docs writing
 - **pm**: Ticket-oriented PM workflows with MCP config, ticket writing, and board summarization
 - **design**: wireframes, component design support, and mockup workflow
 - **testing-reliability**: Datadog dashboards, performance optimization, and testing agents
+- **planning**: strategic planning workflows including devil's advocate analysis
+- **featureflag-migration**: OpenFeature migration with inventory, verification, and scaffolding
+- **cursor-starter-pack**: code quality, system design, onboarding, git hygiene, commits, planning output, and review agents
 
 ## Repository structure
 
