@@ -34,7 +34,7 @@
     {
       "name": "testing",
       "source": "testing",
-      "description": "Test authoring and execution: test engineer and test runner agents; extend mcp.json for CI or tooling as needed"
+      "description": "Test authoring and execution: unit, E2E, and browser automation skills plus test engineer and test runner agents"
     }
   ]
 }

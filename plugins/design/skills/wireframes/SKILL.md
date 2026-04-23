@@ -35,4 +35,3 @@ This skill guides PMs and designers in creating comprehensive wireframes and moc
   - Include annotations indicating which API endpoint and response structure each screen represents
   - Ensure wireframes cover all user flows, including error recovery paths
   - Document any assumptions about data structure or backend behavior
-

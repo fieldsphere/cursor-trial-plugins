@@ -22,7 +22,7 @@ The single home for developer-facing prose workflows. Cursor Starter Pack still 
 
 ### Testing
 
-Focused specifically on automated test workflows. Cursor Starter Pack still sets the baseline expectation that changed behavior should be tested, while this plugin owns the testing specialists: `test-engineer` adds and extends unit and E2E tests that match the project's frameworks and conventions, and `test-runner` executes and interprets the relevant test commands. `mcp.json` is intentionally empty so each team can add CI or vendor MCP servers that fit their stack.
+Focused specifically on automated test workflows. Cursor Starter Pack still sets the baseline expectation that changed behavior should be tested, while this plugin owns the testing specialists: `write-unit-tests` and `write-e2e-tests` provide narrower authoring workflows, `browser-automation-tests` covers live UI verification with Cursor browser automation, `test-engineer` adds and extends unit and E2E tests that match the project's frameworks and conventions, and `test-runner` executes and interprets the relevant test commands. `mcp.json` is intentionally empty so each team can add CI or vendor MCP servers that fit their stack.
 
 ## Repository structure
 

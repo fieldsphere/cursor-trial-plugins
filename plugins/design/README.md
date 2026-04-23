@@ -8,4 +8,4 @@ Focused plugin for UI/UX work:
 - **ui-engineer** agent — Technical UI implementation aligned with approved design intent
 - **Figma MCP** in `mcp.json` when your team uses Figma
 
-Plugin id: **`design`**. Display name: **Design**.
+Plugin id: `**design`**. Display name: **Design**.

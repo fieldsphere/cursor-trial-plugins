@@ -22,15 +22,17 @@ Task Progress:
 
 Scan the repo to gather context. Check for:
 
-| Signal | Files to Check |
-|--------|---------------|
+
+| Signal           | Files to Check                                                                  |
+| ---------------- | ------------------------------------------------------------------------------- |
 | Language/runtime | `package.json`, `pyproject.toml`, `go.mod`, `Cargo.toml`, `Gemfile`, `*.csproj` |
-| Package manager | `package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`, `poetry.lock`, `uv.lock` |
-| Containerization | `Dockerfile`, `docker-compose.yml`, `.devcontainer/` |
-| CI/CD | `.github/workflows/`, `.gitlab-ci.yml`, `Jenkinsfile` |
-| Environment | `.env.example`, `.env.template`, `.envrc` |
-| Existing docs | `README.md`, `docs/`, `CONTRIBUTING.md` |
-| Entry points | `main.ts`, `index.ts`, `app.py`, `main.go`, `src/` |
-| Config | `tsconfig.json`, `vite.config.*`, `next.config.*`, `webpack.config.*` |
+| Package manager  | `package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`, `poetry.lock`, `uv.lock`    |
+| Containerization | `Dockerfile`, `docker-compose.yml`, `.devcontainer/`                            |
+| CI/CD            | `.github/workflows/`, `.gitlab-ci.yml`, `Jenkinsfile`                           |
+| Environment      | `.env.example`, `.env.template`, `.envrc`                                       |
+| Existing docs    | `README.md`, `docs/`, `CONTRIBUTING.md`                                         |
+| Entry points     | `main.ts`, `index.ts`, `app.py`, `main.go`, `src/`                              |
+| Config           | `tsconfig.json`, `vite.config.*`, `next.config.*`, `webpack.config.*`           |
+
 
 If a README already exists, preserve any sections the user has manually written (badges, license, contributing guidelines) and only update the startup and architecture sections.
