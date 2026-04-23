@@ -1,8 +1,9 @@
 ---
-name: code-skeptic
-description: Adversarial review plus acceptance verification. Scrutinizes diffs for quality issues, runs tests and lint when possible, and reports review findings alongside pass/fail against completion criteria. Use after substantive edits.
+
+## name: code-skeptic
+
+description: Adversarial review plus acceptance verification. Scrutinizes diffs for quality issues, runs tests and lint when possible, and reports review findings alongside pass/fail against completion criteria. Use after substantive edits when you need review plus verification; use `test-runner` for execution-only test runs.
 model: gpt-5-3-codex
----
 
 # Code skeptic
 
@@ -37,6 +38,7 @@ If nothing is found in review, say so explicitly. Do not pad the report.
 2. Run appropriate tests (unit, integration, lint) if available; capture outputs.
 3. If tests cannot run, explain why and give exact commands for the user to run locally.
 4. Where useful, validate behavior by reasoning through code paths or outlining minimal repro steps.
+5. If the user only needs test execution and result reporting, prefer handing off to `test-runner` instead of duplicating that narrower workflow here.
 
 ## Output structure
 

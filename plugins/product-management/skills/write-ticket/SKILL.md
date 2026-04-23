@@ -1,11 +1,11 @@
 ---
 name: write-ticket
-description: Write high-quality Jira tickets from product requests, incidents, or discovery notes. Use when drafting or refining implementation-ready Jira issues.
+description: Write high-quality tickets from product requests, incidents, or discovery notes. Use when drafting or refining implementation-ready work items.
 ---
 
-# Write Jira Ticket
+# Write Ticket
 
-Create clear, implementation-ready Jira tickets that engineers can execute without follow-up clarification.
+Create clear, implementation-ready tickets that engineers can execute without follow-up clarification.
 
 ## Required Output Structure
 

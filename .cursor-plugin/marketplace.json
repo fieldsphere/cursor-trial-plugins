@@ -19,22 +19,22 @@
     {
       "name": "product-management",
       "source": "product-management",
-      "description": "Backlog and delivery: Jira-ready tickets, board summaries, devil's advocate planning critique, Atlassian MCP"
+      "description": "Backlog and delivery: implementation-ready tickets, board summaries, devil's advocate planning critique, optional tracker MCP integration"
     },
     {
       "name": "design",
       "source": "design",
-      "description": "UI/UX workflows: wireframes, mockups, component and UI engineer agents, Figma MCP"
+      "description": "UI/UX workflows: wireframes, mockups, designer and ui-engineer agents, Figma MCP"
     },
     {
       "name": "technical-writing",
       "source": "technical-writing",
-      "description": "Docs and prose: README updates, weekly reviews, README hygiene, docs writer, optional Notion MCP"
+      "description": "Long-form docs and README workflows: README updates, weekly reviews, README hygiene, docs writer, optional Notion MCP"
     },
     {
       "name": "testing",
       "source": "testing",
-      "description": "Automated tests: test engineer and test runner agents; extend mcp.json for CI or tooling as needed"
+      "description": "Test authoring and execution: test engineer and test runner agents; extend mcp.json for CI or tooling as needed"
     }
   ]
 }

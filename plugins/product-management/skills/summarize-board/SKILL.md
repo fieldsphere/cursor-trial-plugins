@@ -1,9 +1,9 @@
 ---
 name: summarize-board
-description: Summarize Jira board status for stakeholders with risks, blockers, and delivery confidence. Use for weekly PM updates and planning checkpoints.
+description: Summarize board, backlog, or sprint status for stakeholders with risks, blockers, and delivery confidence. Use for weekly PM updates and planning checkpoints.
 ---
 
-# Summarize Jira Board
+# Summarize Board
 
 Produce a concise board summary that is useful for engineering, product, and leadership updates.
 
@@ -38,5 +38,5 @@ Produce a concise board summary that is useful for engineering, product, and lea
 ## Writing Rules
 
 - Keep tone objective and concise.
-- No emojis in summaries intended for Jira comments or ticket updates.
+- No emojis in summaries intended for tracker comments, ticket updates, or stakeholder notes.
 - Prefer concrete counts and dates over vague statements.

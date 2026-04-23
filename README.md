@@ -10,19 +10,19 @@ Engineering baseline that every contributor gets by default. It ships the non-ne
 
 ### Product Management
 
-Owns everything between "we should build this" and "engineering can execute on it." Use it to draft implementation-ready Jira tickets, summarize a board or sprint for a stakeholder update, and stress-test a plan with the `devils-advocate` agent before any code is written. The included Atlassian MCP wires the plugin into Jira and Confluence so ticket reading and writing stay in the loop.
+Owns everything between "we should build this" and "engineering can execute on it." Use it to draft implementation-ready tickets or work items, summarize a backlog, board, or sprint for a stakeholder update, and stress-test a plan with the `devils-advocate` agent before any code is written. The bundled `mcp.json` shows one tracker integration path; this repo ships Atlassian MCP by default, but teams should replace or remove it to match their stack.
 
 ### Design
 
-Covers UX definition and the handoff into code. The `wireframes` and `mockup` skills help teams reason about backend-aware UI states and high-fidelity layouts, the `component-designer` agent focuses on component-level decisions, and the `ui-engineer` agent implements the result in a way that respects the design intent. The Figma MCP keeps Figma files and code aligned without context switching.
+Covers UX definition and the handoff into code. The `wireframes` and `mockup` skills help teams reason about backend-aware UI states and high-fidelity layouts, `design-schema.md` captures team-specific visual decisions, the `designer` agent handles creative direction and visual exploration, and the `ui-engineer` agent implements approved designs in a way that respects the design intent. The Figma MCP keeps Figma files and code aligned without context switching.
 
 ### Technical Writing
 
-The single home for developer-facing prose. It generates and updates READMEs, produces weekly review summaries, and flags when a code change should trigger a README update (`readme-hygiene`). The `docs-writer` agent handles longer-form documentation such as API references and guides. An optional Notion MCP is included for teams that publish there. Markdown file-naming conventions intentionally live in **Cursor Starter Pack** so naming stays universal rather than docs-specific.
+The single home for developer-facing prose workflows. Cursor Starter Pack still sets the baseline expectation to document important behavior, while this plugin handles README work, weekly review summaries, and longer-form documentation such as API references and guides. The `readme-hygiene` skill notices when changes should update a README, and the `docs-writer` agent handles substantial developer-facing prose. An optional Notion MCP is included for teams that publish there. Markdown file-naming conventions intentionally live in **Cursor Starter Pack** so naming stays universal rather than docs-specific.
 
 ### Testing
 
-Focused specifically on automated tests. The `test-engineer` agent adds and extends unit and E2E tests that match the project's frameworks and conventions, and the `test-runner` agent runs and interprets the relevant test commands. `mcp.json` is intentionally empty so each team can add CI or vendor MCP servers that fit their stack.
+Focused specifically on automated test workflows. Cursor Starter Pack still sets the baseline expectation that changed behavior should be tested, while this plugin owns the testing specialists: `test-engineer` adds and extends unit and E2E tests that match the project's frameworks and conventions, and `test-runner` executes and interprets the relevant test commands. `mcp.json` is intentionally empty so each team can add CI or vendor MCP servers that fit their stack.
 
 ## Repository structure
 

@@ -1,8 +1,8 @@
 ---
-name: code-oracle
+
+## name: code-oracle
 description: Spawns a GPT-5.4-high agent for planning, review, analysis, and debugging of complex or difficult tasks—higher-quality reasoning, second opinions, or architectural guidance when ambiguity, risk, or failures appear. ONLY call this subagent when the user explicitly requests it. NEVER use the fast model for this subagent—it defeats the purpose.
 model: gpt-5-4-high
----
 
 # Code oracle
 
