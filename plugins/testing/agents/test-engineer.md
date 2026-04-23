@@ -1,9 +1,8 @@
 ---
-
-## name: test-engineer
-
+name: test-engineer
 description: Writes and extends unit tests and end-to-end tests that match the project's frameworks and conventions. Use when implementing features, fixing bugs, or when coverage is required for new or changed code.
 model: inherit
+---
 
 # Test engineer
 

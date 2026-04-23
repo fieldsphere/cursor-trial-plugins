@@ -1,7 +1,7 @@
 ---
-
-## name: mockup
+name: mockup
 description: Create production-ready UI mockups tied to real API states and design system constraints. Use when the user asks for polished screen mockups, stateful UI explorations, or handoff-ready visual specs.
+---
 
 # Mockup Creation
 

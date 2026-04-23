@@ -1,7 +1,7 @@
 ---
-
-## name: wireframes
+name: wireframes
 description: Guide PMs and designers in creating comprehensive wireframes and mockups that accurately represent all backend API responses and data states. Use when creating wireframes or mockups for new features.
+---
 
 # Wireframe Creation
 

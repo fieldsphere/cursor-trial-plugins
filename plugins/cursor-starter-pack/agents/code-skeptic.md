@@ -1,9 +1,8 @@
 ---
-
-## name: code-skeptic
-
+name: code-skeptic
 description: Adversarial review plus acceptance verification. Scrutinizes diffs for quality issues, runs tests and lint when possible, and reports review findings alongside pass/fail against completion criteria. Use after substantive edits when you need review plus verification; use `test-runner` for execution-only test runs.
 model: gpt-5-3-codex
+---
 
 # Code skeptic
 
