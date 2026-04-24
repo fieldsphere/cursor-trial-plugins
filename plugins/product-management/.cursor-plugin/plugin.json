@@ -1,0 +1,13 @@
+{
+  "name": "product-management",
+  "displayName": "Product Management",
+  "version": "0.2.0",
+  "description": "Product management workflows: implementation-ready tickets, board summaries, planning critique, and optional tracker MCP integration.",
+  "author": {
+    "name": "Cursor Team",
+    "email": "hi@cursor.com"
+  },
+  "license": "MIT",
+  "keywords": ["cursor", "plugin", "pm", "tickets", "backlog", "planning", "tracker"],
+  "logo": "assets/pm.png"
+}

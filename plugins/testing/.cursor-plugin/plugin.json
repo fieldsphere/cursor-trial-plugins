@@ -1,0 +1,13 @@
+{
+  "name": "testing",
+  "displayName": "Testing",
+  "version": "0.2.0",
+  "description": "Testing workflows: unit-test, E2E, and browser-automation skills plus test engineer and test runner agents.",
+  "author": {
+    "name": "Cursor Team",
+    "email": "hi@cursor.com"
+  },
+  "license": "MIT",
+  "keywords": ["cursor", "plugin", "testing", "qa", "automation", "unit-tests", "e2e", "browser"],
+  "logo": "assets/testing.png"
+}

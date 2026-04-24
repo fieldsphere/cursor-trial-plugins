@@ -26,3 +26,5 @@ Follow these expectations when writing or changing code. Adapt idioms to the lan
 ## Testing and docs
 - Add or update tests when the repo has a test setup and behavior changes.
 - Document public surfaces, non-obvious behavior, and anything future maintainers must not break.
+- When the **Testing** plugin is installed, it owns the test-writing and test-execution workflows; this rule only sets the baseline expectation that changed behavior should be covered.
+- When the **Technical Writing** plugin is installed, it owns README hygiene and long-form developer-facing docs; this rule only sets the baseline expectation to document important behavior.

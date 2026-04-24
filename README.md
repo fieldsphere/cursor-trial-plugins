@@ -1,19 +1,28 @@
-# Cursor Trial Plugins
+# Cursor Fundamentals
 
-An example Team Marketplace that includes a set of starter plugins for Cursor.
+**Cursor Fundamentals** (`cursor-fundamentals`) is a Cursor Team Marketplace built around one idea: give every function a small, focused plugin that encodes how the team actually works. Each plugin contributes the minimum set of rules, skills, agents, and MCP servers needed to raise quality in that function without overlapping with the others.
 
-## Included plugins
+## Plugins
 
-This repo ships these marketplace plugins:
+### Cursor Starter Pack
 
-- **git-workflows**: commit, PR, CI, merge conflict, and branch validation workflows
-- **documentation**: README updates, weekly review summaries, markdown naming, and docs writing
-- **pm**: Ticket-oriented PM workflows with MCP config, ticket writing, and board summarization
-- **design**: wireframes, component design support, and mockup workflow
-- **testing-reliability**: Datadog dashboards, performance optimization, and testing agents
-- **planning**: strategic planning workflows including devil's advocate analysis
-- **featureflag-migration**: OpenFeature migration with inventory, verification, and scaffolding
-- **cursor-starter-pack**: code quality, system design, onboarding, git hygiene, commits, planning output, and review agents
+Engineering baseline that every contributor gets by default. It ships the non-negotiables: code quality and system design rules, a repo-onboarding skill, commit and git hygiene, planning output, and the naming conventions that make markdown files and Cursor agents consistent across the org. The `code-skeptic` and `code-oracle` agents handle critical review and deeper architectural reasoning when a change needs a second set of eyes. Start here; most other plugins assume this one is installed.
+
+### Product Management
+
+Owns everything between "we should build this" and "engineering can execute on it." Use it to draft implementation-ready tickets or work items, summarize a backlog, board, or sprint for a stakeholder update, and stress-test a plan with the `devils-advocate` agent before any code is written. The bundled `mcp.json` shows one tracker integration path; this repo ships Atlassian MCP by default, but teams should replace or remove it to match their stack.
+
+### Design
+
+Covers UX definition and the handoff into code. The `wireframes` and `mockup` skills help teams reason about backend-aware UI states and high-fidelity layouts, `design-schema.md` captures team-specific visual decisions, the `designer` agent handles creative direction and visual exploration, and the `ui-engineer` agent implements approved designs in a way that respects the design intent. The Figma MCP keeps Figma files and code aligned without context switching.
+
+### Technical Writing
+
+The single home for developer-facing prose workflows. Cursor Starter Pack still sets the baseline expectation to document important behavior, while this plugin handles README work, weekly review summaries, and longer-form documentation such as API references and guides. The `readme-hygiene` skill notices when changes should update a README, and the `docs-writer` agent handles substantial developer-facing prose. An optional Notion MCP is included for teams that publish there. Markdown file-naming conventions intentionally live in **Cursor Starter Pack** so naming stays universal rather than docs-specific.
+
+### Testing
+
+Focused specifically on automated test workflows. Cursor Starter Pack still sets the baseline expectation that changed behavior should be tested, while this plugin owns the testing specialists: `write-unit-tests` and `write-e2e-tests` provide narrower authoring workflows, `browser-automation-tests` covers live UI verification with Cursor browser automation, `test-engineer` adds and extends unit and E2E tests that match the project's frameworks and conventions, and `test-runner` executes and interprets the relevant test commands. `mcp.json` is intentionally empty so each team can add CI or vendor MCP servers that fit their stack.
 
 ## Repository structure
 
@@ -24,21 +33,62 @@ This repo ships these marketplace plugins:
 - `plugins/<plugin-name>/agents`: subagent definitions
 - `plugins/<plugin-name>/mcp.json`: MCP server configuration for each plugin
 
-## Validate changes
+## Use this marketplace on your team
 
-Run:
+Cursor imports a team marketplace by reading `.cursor-plugin/marketplace.json` from a GitHub repository. There are two realistic ways to consume Cursor Fundamentals: **point at this public repo directly**, or **fork it** and tailor the plugins to your team. Pick based on how much you want to customize and how much upstream change you're willing to inherit.
 
-```bash
-node scripts/validate-template.mjs
-```
+### Option A: Point at the public repo directly (no fork)
 
-This checks marketplace paths, plugin manifests, and required frontmatter in rule/skill/agent/command files.
+Fastest path. Import this repo's GitHub URL as your team marketplace. Your team automatically tracks every commit upstream makes to the default branch.
 
-## Submission checklist
+1. In Cursor, go to **Dashboard → Settings → Plugins → Import**.
+2. Paste this repo's GitHub URL.
+3. Pick access groups and mark each plugin **Required** (auto-installed) or **Optional** (developer choice).
+4. Save.
 
-- Each plugin has a valid `.cursor-plugin/plugin.json`
-- Plugin names are unique, lowercase, and kebab-case
-- `.cursor-plugin/marketplace.json` entries map to real plugin folders
-- Required frontmatter metadata exists in plugin content files
-- Logo paths resolve correctly from each plugin manifest
-- `node scripts/validate-template.mjs` passes
+**Benefits**
+
+- Zero maintenance. No fork, no merges, no CI.
+- New plugins and fixes show up automatically as upstream ships them.
+- Simple story for small teams that don't need org-specific tweaks yet.
+
+**Risks**
+
+- You inherit **every** upstream change on the default branch, including breaking ones. Upstream decisions about plugin scope, agents, or MCP servers become your decisions by default.
+- You cannot add org-specific rules, agents, or MCP credentials to the marketplace itself. You can still configure MCP env vars locally, but plugin content stays whatever upstream ships.
+- On the **Teams** plan you only get 1 team marketplace, so "pointing at upstream" uses up that slot and blocks you from publishing your own.
+- You are trusting the upstream maintainer. If you don't control this repo, treat this option like installing any third-party extension and review the contents first.
+
+**Best for:** teams evaluating Cursor team marketplaces, small teams happy with the defaults, or orgs that explicitly want to track an official/maintained baseline.
+
+### Option B: Fork and publish your own (recommended for most teams)
+
+Fork this repo into your GitHub org, edit it to match your stack and conventions, and register the fork as your team marketplace. You own what ships, and you can still pull upstream updates as PRs when you want them.
+
+1. Fork this repository to your team's GitHub organization (for example, `your-org/cursor-fundamentals`).
+2. Clone the fork locally and edit plugin contents (`rules/`, `skills/`, `agents/`, `mcp.json`) to reflect your stack, conventions, and tooling. Remove plugins you don't want.
+3. If you rename the marketplace, update both `name` (lowercase kebab-case) and `displayName` in [.cursor-plugin/marketplace.json](.cursor-plugin/marketplace.json).
+4. Run `node scripts/validate-template.mjs` to catch manifest, frontmatter, and path issues before publishing.
+5. Commit and push. If the repo is private, grant the Cursor GitHub app read access when prompted.
+6. In Cursor, go to **Dashboard → Settings → Plugins → Import**, paste your fork's URL, pick access groups, and mark each plugin **Required** or **Optional**.
+
+**Benefits**
+
+- Full control over plugin content, scope, and MCP wiring.
+- Org-specific rules and agents live in one place, versioned in git alongside your other internal tools.
+- Updates ship when *you* push to the default branch, on your review cadence.
+
+**Risks**
+
+- You own maintenance: merging upstream updates, validating manifests, and keeping plugin docs aligned with reality.
+- Public forks are public on GitHub; if your plugins reference internal systems, use a private fork (or "Use this template") and grant the Cursor GitHub app access.
+
+**Best for:** any team that wants to encode its own conventions, credentials, or tool choices — which is most teams once they move past evaluation.
+
+## Further reading
+
+- [Cursor Plugins documentation](https://cursor.com/docs/plugins) — plugin anatomy (rules, skills, agents, commands, MCP, hooks) and team-marketplace setup.
+- [Cursor Marketplace](https://www.cursor.com/marketplace) — officially reviewed plugins you can use as references.
+- [cursor/plugin-template](https://github.com/cursor/plugin-template) — minimal starter for building a single plugin or multi-plugin marketplace.
+- [Team dashboard](https://cursor.com/docs/account/teams/dashboard) — where team marketplaces are imported and managed.
+
